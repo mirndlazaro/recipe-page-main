@@ -1,0 +1,207 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body {
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--clr-neutral-white-300);
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--clr-primary-nutmeg);
+}
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+  line-height: 24px;
+}
+/*
+    8. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+li {
+    padding: .4rem;
+}
+
+:root {
+    --clr-primary-nutmeg: hsl(14, 45%, 36%);
+    --clr-secondary-dark-rasp: hsl(332, 51%, 32%);
+
+    --clr-neutral-white:hsl(0, 0%, 100%);
+    --clr-neutral-white-100:hsl(330, 100%, 98%);
+    --clr-neutral-white-300: hsl(30, 54%, 90%);
+    --clr-grey-100: hsl(30, 18%, 87%);
+    --clr-brown-400: hsl(30, 10%, 34%);
+    --clr-brown-600: hsl(24, 5%, 18%);
+}
+
+article {
+    max-width: 700px;
+    height: 100%;
+    background-color: var(--clr-neutral-white);
+}
+
+@media screen and (min-width: 768px){
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 3rem 0;
+    }
+
+    picture {
+        padding: 2rem;
+    }
+
+    img {
+        border-radius: .6rem;
+    }
+
+    article {
+        border-radius: 1rem;
+    }
+
+    main {
+        padding-top: .8rem;
+    }
+
+    table {
+        text-align: left;
+    }
+}
+
+main {
+    display: grid;
+    gap: 2px;
+    padding: 1rem 2rem;
+}
+
+h1 {
+    font-family: "Young Serif", serif;
+    font-weight: 400;
+    color: var(--clr-brown-600);
+    font-size: 36px;
+    line-height: 38px;
+    margin: 1.25rem 0;
+}
+
+h2 {
+    font-family: "Young Serif", serif;
+    margin-bottom: 1rem;    
+}
+
+p {
+    line-height:24px;
+}
+
+.card-preparation-time {
+    border-radius: .6rem;
+    padding: 1rem 2rem;
+    background-color: var(--clr-neutral-white-100);
+    margin: 2rem 0;
+}
+
+.card-preparation-time h3 {
+    color: var(--clr-secondary-dark-rasp);
+    padding-bottom: .5rem;
+}
+
+.card-preparation-time ul li {
+    list-style-position: outside;
+}
+
+ol, ul {
+    padding-left: 1.25rem;
+    line-height: 24px;
+}
+
+ol li {
+    line-height: 30px;
+}
+
+ol li::marker {
+    font-weight: 600;
+}
+
+.instructions {
+    padding: 2rem 0;
+    border-top: 0.1px solid var(--clr-grey-100);
+    border-bottom: 0.1px solid var(--clr-grey-100);
+    margin: 1.5rem 0;
+} 
+
+table {
+    margin: 1rem 0;
+    width: 100%;
+    border-spacing:0; /* Removes the cell spacing via CSS */
+    border-collapse: collapse;
+}
+
+table tbody tr {
+    border-spacing: 30px;
+    border-bottom: 1px solid var(--clr-grey-100);
+}
+
+table tbody tr:last-child {
+    border-bottom: none;
+}
+
+table tbody tr th {
+    font-weight: 400;
+}
+
+table tbody tr td {
+    font-weight: 600;
+}
+
+table tbody tr th, td {
+    padding: 15px;
+    /* border-bottom: 1px solid var(--clr-grey-100); */
+}
